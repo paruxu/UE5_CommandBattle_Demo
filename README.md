@@ -8,16 +8,16 @@
 ## 設計思想
 
 - 戦闘時の敵・味方オブジェクトを「BattleUnit」として扱う。
-- 戦闘中のHPなどはBattleUnitComponentのローカル変数で管理する
+- 戦闘中のHPなどはBattleUnitComponentのローカル変数で管理する。
+- 処理はBlueprintで構築し、適宜関数を呼び出してコマンドバトルシステムを構築する。
 
 ## フォルダ構成
 
 | フォルダ | 役割 |
 |---|---|
 | `Core`| 戦闘に関する処理を配置 |
-| `Data` | 敵のHPや攻撃力、経験値・メッシュを登録するData Assetの定義 |
+| `Data` | 敵の種類ごとのHPや攻撃力、経験値、メッシュなどを登録するData Assetを定義 |
 | `Units` | 戦闘時の敵・味方ユニットの状態管理に関する処理を配置 |
-
 
 ## 関数詳細
 | ファイル | 関数名 |　役割 |
@@ -31,11 +31,6 @@
 | `Units/BattleUnitComponent.cpp` |SetLevelUpStats|レベルアップ時の上昇ステータスを固定倍率で計算し、セットする |
 | `Units/BattleUnitComponent.cpp` |SortBySpeed|ユニットが格納された配列を引数として受け取り、素早さ順に並び替えて戻す |
 | `Units/BattleUnitComponent.cpp` |SetEnemyStatus|GetEnemyDataByIDと併用する。ストラクタ「FEnemyData」の敵ステータスをセットする |
-
-
-## 設計上のポイント
-### C++の処理をBlueprintから利用する
-ダメージ計算や戦闘結果判定などを、Blueprintから呼び出して処理を構築した。
 
 ## 注意
 本リポジトリでは、ゲームで使用している主要なC++ソースコードを公開しています。本リポジトリ単体ではビルド・実行できません。
