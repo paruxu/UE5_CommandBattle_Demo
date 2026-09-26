@@ -22,7 +22,7 @@
 | `Core/RPGGameInstance.cpp` |CheckLevelUp| 現在の経験値≧レベルアップのために必要な経験値 であれば、レベルアップ処理を1回行う |
 | `Core/RPGGameInstance.cpp` |SavePlayerStatsFromBattleUnit| RPGGameInstanceへステータスを保存する（戦闘終了後、現在HPを持ち越すため） |
 | `Core/RPGGameInstance.cpp` |RestorePlayerStatsToBattleUnit|RPGGameInstanceへステータスを保存する（戦闘開始前、現在HPを設定するため） |
-| `Core/RPGGameInstance.cpp` |GetEnemyDataByID|ストラクタ「FEnemyData」より敵ステタースを取得する |
+| `Core/RPGGameInstance.cpp` |GetEnemyDataByID|ストラクタ「FEnemyData」より敵ステータスを取得する |
 | `Units/BattleUnitComponent.cpp` |ApplyDamage|攻撃側と防御側のステータスをもとに、ダメージ計算を行う |
 | `Units/BattleUnitComponent.cpp` |SetLevelUpStats|レベルアップ時の上昇ステータスを固定倍率で計算し、セットする |
 | `Units/BattleUnitComponent.cpp` |SortBySpeed|ユニットが格納された配列を引数として受け取り、素早さ順に並び替えて戻す |
