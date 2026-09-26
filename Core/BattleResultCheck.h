@@ -27,10 +27,10 @@ public:
 
 	//バトルユニットを代入する配列
 	UPROPERTY(EditAnywhere,  BlueprintReadWrite, Category = "Battle")
-TArray<TObjectPtr<UBattleUnitComponent>> BattleUnits;
+	TArray<TObjectPtr<UBattleUnitComponent>> BattleUnits;
 
 //戦闘結果判定　（戻り値：[0]継続、[1]勝利、[2]敗北）
-UFUNCTION(BlueprintCallable, Category = "Battle")
-int32 EvaluateBattleResult() const;
+	UFUNCTION(BlueprintCallable, Category = "Battle")
+	int32 EvaluateBattleResult() const;
 		
 };
