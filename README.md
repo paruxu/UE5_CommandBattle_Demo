@@ -15,16 +15,16 @@
 - **マップ間の状態引き継ぎ**：GameInstanceを使用し、レベル遷移時にもステータスを保持
 - **敵データ管理**：Data Assetに登録した敵のステータスを、敵IDをキーとして取得
 
-
 ## ソースコード構成
 
 | ファイル | 役割 |
 |---|---|
-| `Units/BattleUnitComponent.h / .cpp` | ユニットの状態管理、ダメージ計算、行動順の決定、レベルアップ時の能力値更新 |
+| `Core/BattleManager.h` | Blueprintで拡張するためのActor基底クラス |
 | `Core/BattleResultCheck.h / .cpp` | 敵味方のHPによる戦闘結果判定 |
 | `Core/RPGGameInstance.h / .cpp` | プレイヤー情報の保持・復元、レベルアップ判定、敵データ取得 |
 | `Data/EnemyList.h / .cpp` | 敵の能力値・獲得経験値・メッシュを登録するData Assetの定義 |
-| `Core/BattleManager.h` | Blueprintで拡張するためのActor基底クラス |
+| `Units/BattleUnitComponent.h / .cpp` | ユニットの状態管理、ダメージ計算、行動順の決定、レベルアップ時の能力値更新 |
+
 
 ## 設計上のポイント
 
@@ -52,7 +52,3 @@
 2. `BattleResultCheck.cpp`：戦闘の終了条件
 3. `RPGGameInstance.cpp`：レベルアップとステータス引き継ぎ
 4. `EnemyList.h`：敵データの定義
-
-## 補足
-
-追加行動用の `1more` フラグは定義していますが、それを使った追加行動システムは本公開コードには含まれていません。
