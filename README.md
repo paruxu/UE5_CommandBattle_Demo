@@ -24,12 +24,11 @@
 | `Core/RPGGameInstance.cpp` |RestorePlayerStatsToBattleUnit|RPGGameInstanceへステータスを保存する（戦闘開始前、現在HPを設定するため） |
 | `Core/RPGGameInstance.cpp` |GetEnemyDataByID|ストラクタ「FEnemyData」より敵ステタースを取得する |
 | `Units/BattleUnitComponent.cpp` |ApplyDamage|攻撃側と防御側のステータスをもとに、ダメージ計算を行う |
-| `Units/BattleUnitComponent.cpp` |ApplyDamage|攻撃側と防御側のステータスをもとに、ダメージ計算を行う |
-| `Units/BattleUnitComponent.cpp` |ApplyDamage|攻撃側と防御側のステータスをもとに、ダメージ計算を行う |
-
+| `Units/BattleUnitComponent.cpp` |SetLevelUpStats|レベルアップ時の上昇ステータスを固定倍率で計算し、セットする |
+| `Units/BattleUnitComponent.cpp` |SortBySpeed|ユニットが格納された配列を引数として受け取り、素早さ順に並び替えて戻す |
+| `Units/BattleUnitComponent.cpp` |SetEnemyStatus|GetEnemyDataByIDと併用する。ストラクタ「FEnemyData」の敵ステータスをセットする |
 
 
 ## 設計上のポイント
-
 ### C++の処理をBlueprintから利用する
 ダメージ計算や戦闘結果判定などを、Blueprintから呼び出して処理を構築した。
