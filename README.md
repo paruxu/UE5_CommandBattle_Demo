@@ -16,7 +16,7 @@
 ※補足・・・ユニット戦闘時の敵・味方オブジェクトを「BattleUnit」として扱います
 
 ## 関数詳細
-| ファイル | 関数名 | | 役割 |
+| ファイル | 関数名 |　役割 |
 |---|---|---|
 | `Core/BattleResultCheck.cpp` |EvaluateBattleResult| 敵・味方のHPをチェックし、勝敗の判定を行う。 |
 | `Core/RPGGameInstance.cpp` |CheckLevelUp| 現在の経験値≧レベルアップのために必要な経験値 であれば、レベルアップ処理を1回行う |
