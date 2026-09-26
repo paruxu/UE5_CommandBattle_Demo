@@ -15,7 +15,7 @@
 
 ## 関数詳細
 | ファイル | 関数名 | | 役割 |
-|---|---||---|
+|---|---|---|
 | `Core/BattleResultCheck.cpp` |EvaluateBattleResult| 敵・味方のHPをチェックし、勝敗の判定を行う。 |
 | `Core/RPGGameInstance.h / .cpp` || プレイヤー情報の保持・復元、レベルアップ判定、敵データ取得 |
 | `Data/EnemyList.h / .cpp` || 敵の能力値・獲得経験値・メッシュを登録するData Assetの定義 |
