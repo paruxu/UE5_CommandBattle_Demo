@@ -2,7 +2,6 @@
 
 UBattleUnitComponent::UBattleUnitComponent()
 {
-    // 毎フレームの処理は使わない
     PrimaryComponentTick.bCanEverTick = false;
 }
 
