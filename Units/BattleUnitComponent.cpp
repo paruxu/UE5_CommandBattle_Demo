@@ -9,7 +9,7 @@ void UBattleUnitComponent::BeginPlay()
 {
     Super::BeginPlay();
 
-    // 最大HPが最低1になるように補正
+    // 最大HPが最低1になるよう設定
     MaxHP = FMath::Max(MaxHP, 1);
 
     // ゲーム開始時はHP Maxとする。
