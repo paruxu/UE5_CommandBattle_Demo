@@ -8,8 +8,8 @@
 //戦闘結果判定処理
 int32 UBattleResultCheck::EvaluateBattleResult() const
 {
-	bool bVL_PlayerAlive = false; //味方が生存してればtrueに
-	bool bVL_EnemyAlive = false; //敵が生存していればtrueに
+	bool bVL_PlayerAlive = false; //味方(VL_UnitFLG=0)が生存してればtrueに
+	bool bVL_EnemyAlive = false; //敵(VL_UnitFLG=1)が生存していればtrueに
 
 	for (const auto& Unit : BattleUnits)
 	{
